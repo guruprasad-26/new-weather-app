@@ -1,38 +1,46 @@
-.App {
-  text-align: center;
+body {
+  font-family: sans-serif;
+  /* margin: 20px; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
+  background-image: url("./images/sunny-new-bg.jpg");
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4s ease-out;
+  padding-top: 2px;
+  width: 100%;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.app.hot {
+  background-image: url("./images/sunny-new-bg.jpg");
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app.cold {
+  background-image: url("./images/snow-new-bg.png");
+}
+
+.app.rain {
+  background-image: url("./images/rainy-new-bg.jpg");
+}
+
+.app.cloud {
+  background-image: url("./images/cloudy-new-bg.jpg");
+}
+
+main {
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.445),
+    rgba(0, 0, 0, 0.829)
+  );
+  padding: 25px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
